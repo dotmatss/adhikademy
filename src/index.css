@@ -122,3 +122,27 @@
     @apply bg-background text-foreground;
     }
 }
+
+
+@layer components {
+  .doodle-border {
+    border: 2px solid #18181b;
+    /* This creates the hand-drawn "imperfect" rectangle look */
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  }
+
+  .doodle-shadow {
+    box-shadow: 5px 5px 0px 0px #18181b;
+    transition: all 0.2s ease;
+  }
+
+  .doodle-shadow:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0px 0px #18181b;
+  }
+}
+
+body {
+  background-color: #fffdfa; /* Paper-like off-white */
+  font-family: 'Inter', sans-serif;
+}
